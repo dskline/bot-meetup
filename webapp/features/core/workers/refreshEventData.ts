@@ -8,7 +8,7 @@ export default async function refreshEventData() {
   const database = db();
 
   for (const event of eventsWithWeather) {
-    database.collection("events").doc(event.dateTime.toDateString()).set(event);
+    await database.collection("events").doc(event.dateTime.toDateString()).set(event);
   }
   return eventsWithWeather;
 }
