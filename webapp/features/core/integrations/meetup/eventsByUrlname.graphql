@@ -1,0 +1,14 @@
+query ($urlname: String!) {
+    groupByUrlname(urlname: $urlname) {
+        upcomingEvents(input: { first: 15 }) {
+            edges {
+                node {
+                    id
+                    title
+                    dateTime
+                    eventUrl
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Meetup GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Meetup": {
+        "url": "https://api.meetup.com/gql",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "cookie": "MEETUP_BROWSER_ID=id=349108e7-93aa-4e91-b3c0-b88c1ff85ede; cache-type=all; MEETUP_LANGUAGE=language=en&country=US; MEETUP_TRACK=id=ebcbf4be-1568-4ca0-904e-91c3cc767757&l=1&s=8ed6a32aa644a86567c4845dc5427c82fc9a045c; MEETUP_SEGMENT=member; MEETUP_INVALIDATE=WZ0YUQWNLdMUb5vE; memberId=231357883; MEETUP_SESSION=88f0654c-9117-4f4b-aced-aa2be77738e7; MEETUP_MEMBER=id=231357883&status=1&timestamp=1648487977&bs=0&tz=US%2FEastern&zip=27560&country=us&city=Morrisville&state=NC&lat=35.83&lon=-78.84&ql=false&s=f270eaabea91eee16f7e7bee9114d18f0ebaf0c2&scope=ALL; MEETUP_CSRF=cf70370c-6b40-4612-89eb-97f2d19443d7; SIFT_SESSION_ID=67e5a41e-93b8-427f-bba3-b02388a489d0; EVENT_HOME_MEMBER_SPLIT_TEST_6=control; x-mwp-csrf=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYTUxYjRhZTUtYWM0Yy00NWRhLWJmNDQtMDUwZTk3OTYwOTdiIiwidHlwZSI6ImNvb2tpZSIsImlhdCI6MTY0ODQ5MzkxNX0.6iHXkOCqvfRAx4aIla_W_Kaot4Sanlr8ihqwWnXAZSg; x-mwp-csrf-header=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYTUxYjRhZTUtYWM0Yy00NWRhLWJmNDQtMDUwZTk3OTYwOTdiIiwidHlwZSI6ImhlYWRlciIsImlhdCI6MTY0ODQ5MzkxNX0.r5mDFX1z9H9Ty3n8KD5ElASwPKpndjHUm-eKi0M21EY"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
