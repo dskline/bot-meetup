@@ -4,6 +4,7 @@ import { WeatherData } from '@/features/core/integrations/weather/filterGoodWeat
 export const simpleMock: Array<MeetupEvent & WeatherData> = [
   {
     title: 'Christmas Party',
+    eventUrl: 'https://www.meetup.com/London-JS/events/264525894/',
     dateTime: new Date('2020-12-25T00:00:00.000Z'),
     dt_txt: '2020-12-25T00:00:00.000Z',
     main: {

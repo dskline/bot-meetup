@@ -1,3 +1,5 @@
+import React from "react";
+
 import "@/theme/global.css";
 import type { AppProps } from "next/app";
 
