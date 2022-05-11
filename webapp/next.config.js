@@ -6,6 +6,7 @@ module.exports = {
       {
         source: '/',
         destination: '/events',
+        permanent: false,
       },
     ]
   }
