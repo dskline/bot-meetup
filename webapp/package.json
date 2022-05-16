@@ -2,8 +2,8 @@
   "name": "@frontendlive/bot-meetup",
   "version": "1.0.0",
   "scripts": {
-    "start": "next dev",
-    "build": "next build",
+    "start": "doppler run -- next dev",
+    "build": "doppler run -- next build",
     "lint": "next lint",
     "test": "jest"
   },
