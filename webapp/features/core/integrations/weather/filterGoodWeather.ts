@@ -1,20 +1,21 @@
 interface Temporal {
-  dateTime: Date
+  dateTime: Date;
 }
 export type WeatherData = {
-  dt_txt: string,
+  userApproved: boolean;
+  dt_txt: string;
   main: {
-    temp: number,
-    feels_like: number
-  },
+    temp: number;
+    feels_like: number;
+  };
   wind: {
-    speed: number,
-    gust: number
-  },
-  pop: number
+    speed: number;
+    gust: number;
+  };
+  pop: number;
 };
 type WeatherApiResponse = {
-  list: Array<WeatherData>
+  list: Array<WeatherData>;
 };
 export default async function filterGoodWeather<T extends Temporal>(
   temporals: Array<T>
@@ -40,12 +41,15 @@ export default async function filterGoodWeather<T extends Temporal>(
     const weatherData = response.list.find(
       (data) => new Date(data.dt_txt.replace(" ", "T")) >= temporal.dateTime
     );
-    if (
-      weatherData &&
-      weatherData.main.feels_like > 60 &&
-      (weatherData.wind.gust + weatherData.wind.speed) / 2 < 20 &&
-      weatherData.pop === 0 // no rain
-    ) {
+    if (weatherData) {
+      if (
+        weatherData.main.feels_like > 60 &&
+        weatherData.main.feels_like < 85 &&
+        (weatherData.wind.gust + weatherData.wind.speed) / 2 < 20 &&
+        weatherData.pop === 0 // no rain
+      ) {
+        weatherData.userApproved = true;
+      }
       returnValue.push({
         ...temporal,
         ...weatherData,
